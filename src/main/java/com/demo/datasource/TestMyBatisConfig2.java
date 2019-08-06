@@ -19,8 +19,8 @@ import com.atomikos.jdbc.AtomikosDataSourceBean;
 
 /**
  * @Configuration 和@MapperScan两个注解
- * DataSource1Config类的两个注解开启，TestMyBatisConfig1类的两个注解关闭，就代表使用单数据库事物
- * TestMyBatisConfig1类的两个注解开启，DataSource1Config类的两个注解关闭，就代表使用分布式数据库事物
+ * DataSource1Config类的两个注解开启，TestMyBatisConfig1类的两个注解关闭，就代表使用单数据库事务
+ * TestMyBatisConfig1类的两个注解开启，DataSource1Config类的两个注解关闭，就代表使用分布式数据库事务
   *  因为TestMyBatisConfig1使用了atomikos
  *
  */
@@ -53,7 +53,7 @@ public class TestMyBatisConfig2 {
 //		xaDataSource.setMaxIdleTime(testConfig.getMaxIdleTime());
 //		xaDataSource.setTestQuery(testConfig.getTestQuery());
 		
-		LOG.info("分布式事物dataSource2实例化成功");
+		LOG.info("分布式事务dataSource2实例化成功");
 		return xaDataSource;
 	}
 

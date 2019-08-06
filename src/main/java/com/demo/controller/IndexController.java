@@ -50,7 +50,7 @@ public class IndexController {
 	}
 
 	/**
-	 * atomikos效果：分布式事物。两个数据库都插入值
+	 * atomikos效果：分布式事务。两个数据库都插入值
 	 * 
 	 * @param name
 	 * @param age
@@ -63,7 +63,7 @@ public class IndexController {
 	}
 
 	/**
-	 * atomikos效果：分布式事物。 演示发生异常分布式事物回滚
+	 * atomikos效果：分布式事务。 演示发生异常分布式事务回滚
 	 * 
 	 * @param name
 	 * @param age
@@ -76,7 +76,7 @@ public class IndexController {
 	}
 
 	/**
-	 * atomikos效果：分布式事物。 演示发生异常分布式事物回滚
+	 * atomikos效果：分布式事务。 演示发生异常分布式事务回滚
 	 *  直接调用mapper方式
 	 * @param name
 	 * @param age

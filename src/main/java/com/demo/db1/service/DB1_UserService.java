@@ -40,7 +40,7 @@ public class DB1_UserService {
 	@Transactional
 	public void insert2DB1(String name, Integer age) {
 		db1UserMapper.insert(name, age);
-//		int i = 2 / 0; // error 2，配合insertTwoDBsWithError分布式事物回滚演示
+//		int i = 2 / 0; // error 2，配合insertTwoDBsWithError分布式事务回滚演示
 	}
 
 	public List<Users> queryAll() {

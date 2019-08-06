@@ -24,7 +24,7 @@ public class IndexService {
 	@Autowired
 	private DB2_UserService db2UserService;
 	/**
-	 *  atomikos效果：分布式事物。两个数据库都插入值
+	 *  atomikos效果：分布式事务。两个数据库都插入值
 	 * @return
 	 */
 	@Transactional
@@ -43,9 +43,9 @@ public class IndexService {
 	}
 
 	/**
-	 * atomikos效果：分布式事物。
-	  *  演示发生异常分布式事物回滚
-	  *  这里无论error 1、2、3，任何一处发生异常，分布式事物都会回滚
+	 * atomikos效果：分布式事务。
+	  *  演示发生异常分布式事务回滚
+	  *  这里无论error 1、2、3，任何一处发生异常，分布式事务都会回滚
 	 */
 	@Transactional //(rollbackFor = { Exception.class })
 	public void insertTwoDBsWithError(String name, Integer age) {
@@ -55,9 +55,9 @@ public class IndexService {
 	}	
 	
 	/**
-	 * atomikos效果：分布式事物。
-	  *  演示发生异常分布式事物回滚
-	  *  这里无论error 1、2、3，任何一处发生异常，分布式事物都会回滚
+	 * atomikos效果：分布式事务。
+	  *  演示发生异常分布式事务回滚
+	  *  这里无论error 1、2、3，任何一处发生异常，分布式事务都会回滚
 	  *  此方法效果等同于insertTwoDBsWithError
 	 */
 	@Transactional

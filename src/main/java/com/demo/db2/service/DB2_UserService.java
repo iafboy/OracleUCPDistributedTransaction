@@ -33,7 +33,7 @@ public class DB2_UserService {
 	@Transactional
 	public void insert2DB2(String name, Integer age) {
 		userMapperDB2.insert(name, age);
-		int i = 3 / 0; // error 3，配合insertTwoDBsWithError分布式事物回滚演示
+		int i = 3 / 0; // error 3，配合insertTwoDBsWithError分布式事务回滚演示
 	}
 
 	public List<Users> queryAll() {
